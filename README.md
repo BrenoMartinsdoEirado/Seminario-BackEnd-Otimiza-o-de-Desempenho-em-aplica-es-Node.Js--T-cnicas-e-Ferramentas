@@ -4,20 +4,20 @@
 ### 1. Clonar o Repositório
 
 ```bash
-git clone git@github.com:nearform/node-clinic-doctor-examples.git
+git clone git@github.com:BrenoMartinsdoEirado/Seminario-BackEnd-Otimiza-o-de-Desempenho-em-aplica-es-Node.Js--T-cnicas-e-Ferramentas.git
 
 ```
 
-Este comando clona o repositório  `node-clinic-doctor-examples`  do GitHub para o seu ambiente local. Isso cria uma cópia completa do repositório, incluindo todos os arquivos e histórico de commits.
+Este comando clona o repositório  `Seminario-BackEnd-Otimiza-o-de-Desempenho-em-aplica-es-Node.Js--T-cnicas-e-Ferramentas`  do GitHub para o seu ambiente local. Isso cria uma cópia completa do repositório, incluindo todos os arquivos e histórico de commits.
 
 ### 2. Navegar para o Diretório do Repositório
 
 ```bash
-cd node-clinic-doctor-examples
+cd node-Seminario-BackEnd-Otimiza-o-de-Desempenho-em-aplica-es-Node.Js--T-cnicas-e-Ferramentas
 
 ```
 
-Este comando muda o diretório atual para o diretório  `node-clinic-doctor-examples`, que foi criado ao clonar o repositório. Isso permite que você trabalhe dentro do repositório clonado.
+Este comando muda o diretório atual para o diretório  `node-Seminario-BackEnd-Otimiza-o-de-Desempenho-em-aplica-es-Node.Js--T-cnicas-e-Ferramentas`, que foi criado ao clonar o repositório. Isso permite que você trabalhe dentro do repositório clonado.
 
 ### 3. Instalar as Dependências do Projeto
 
@@ -48,41 +48,19 @@ Este comando instala o  `autocannon`  globalmente. O  `autocannon`  é uma ferra
 
 ## Exemplos
 
-### Event Loop
+### Como rodar o codigo
 
 ```bash
-clinic doctor --autocannon [ / ] -- node slow-event-loop
+npx autocannon http://localhost:3000
 
 ```
 
- Este comando executa o  `clinic doctor`  com o  `autocannon`  para testar a aplicação  `slow-event-loop`. O  `clinic doctor`  analisa o desempenho da aplicação, enquanto o  `autocannon`  gera carga HTTP.
-
-### Garbage Collection (GC)
-
 ```bash
-clinic doctor --autocannon [ -c 2500 / ] -- node slow-gc
+clinic doctor --on-port 'autocannon localhost:$PORT' -- node index.js
 
 ```
 
-Este comando é semelhante ao anterior, mas testa a aplicação  `slow-gc`, que simula problemas de coleta de lixo (Garbage Collection). O parâmetro  `-c 2500`  especifica o número de conexões simultâneas que o  `autocannon`  deve usar.
-
-### I/O
-
-```bash
-clinic doctor --autocannon [ / ] -- node slow-io
-
-```
-
-Este comando testa a aplicação  `slow-io`, que simula problemas de entrada/saída (I/O). O  `clinic doctor`  ajuda a identificar gargalos de desempenho relacionados a operações de I/O.
-
-### I/O Síncrono
-
-```bash
-clinic doctor --autocannon [ / ] -- node sync-io
-
-```
-
-Este comando testa a aplicação  `sync-io`, que simula problemas de I/O síncrono. O  `clinic doctor`  analisa como operações de I/O síncrono podem afetar o desempenho da aplicação.
+ 
 
 ## Licença
 

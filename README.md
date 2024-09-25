@@ -54,9 +54,9 @@ Este comando instala o  `autocannon`  globalmente. O  `autocannon`  é uma ferra
 npx autocannon http://localhost:3000
 
 ```
-
+### para poder testar cada tipo de evento digite nome da pasta localizada exemplo:
 ```bash
-clinic doctor --on-port 'autocannon localhost:$PORT' -- node index.js
+clinic doctor --on-port 'autocannon localhost:$PORT' -- node slow-event-loop
 
 ```
 
